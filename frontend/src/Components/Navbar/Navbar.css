@@ -1,0 +1,138 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.navbar .logo {
+    width: 150px;
+}
+.navbar_menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 18px;
+    list-style: none;
+    cursor: pointer;
+}
+.navbar_menu li:hover {
+    color: var(--main-color);
+}
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar_right button {
+    padding: 10px 30px;
+    font-size: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+    color: var(--text-color);
+    background: transparent;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.navbar_right button:hover {
+    background-color: var(--hover-btn-color);
+}
+
+.active {
+    padding-bottom: 2px;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+.navbar-search-icon {
+    position: relative;
+}
+.navbar-search-icon .dot {
+    min-height: 10px;
+    min-width: 10px;
+    position: absolute;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar_profile {
+    position: relative;
+    cursor: pointer;
+}
+.nav_profile_logout {
+    position: absolute;
+    list-style: none;
+    display: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    right: 0;
+    z-index: 100000; /* This z-index value ensures the parent element is above many other elements */
+    cursor: pointer;
+}
+
+
+.navbar_profile:hover .nav_profile_logout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid tomato;
+    background-color: #fff2ef;
+    outline: 2px solid white; 
+}
+.nav_profile_logout li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav_profile_logout img {
+    width: 20px;
+}
+.nav_profile_logout li:hover {
+    color: tomato;
+}
+@media (max-width:1040px){
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar_menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar_right {
+        gap: 30px;
+    }
+    .navbar_right img {
+        width: 22px;
+    }
+    .navbar_right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px){
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar_menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar_right {
+        gap: 20px;
+    }
+    .navbar_right img {
+        width: 20px;
+    }
+    .navbar_right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px){
+    .navbar_menu {
+        display: none;
+    }
+     
+}

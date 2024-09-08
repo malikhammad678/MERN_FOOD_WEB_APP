@@ -1,0 +1,33 @@
+.order_add {
+    padding: 20px;
+}
+
+.order_item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid tomato;
+    margin: 30px 0;
+    font-size: 14px;
+    color: #505050;
+}
+
+.order_item_food, .order_item_name {
+    font-weight: 600;
+}
+.order_item_name {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.order_item_address {
+    margin-bottom: 5px;
+}
+.order_item select {
+  background-color: #ffe8e4;
+  border: 1px solid tomato;
+  width: max(10vw,120px);
+  padding: 10px;
+  outline: none;
+}
